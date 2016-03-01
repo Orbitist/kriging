@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+	</head>
+	<body>
+   <canvas width="1222" height="617" id="mycanvas"></canvas>
+
+		<script type="text/javascript" src="kriging.js"></script>
+		<script type="text/javascript" src="latitude.js"></script>
+		<script type="text/javascript" src="longitude.js"></script>
+		<script type="text/javascript" src="ndvi.js"></script>
+		<script type="text/javascript" src="measurements.js"></script>
+		<script type="text/javascript" src="polygons.js"></script>
+		<script type="text/javascript">
+
+			var x = new kriging("mycanvas", 1);
+			x.krig(longitude, latitude, response, polygons); 
+			x.map([longrange.mean(), latrange.mean()], 3);
+
+		</script>
+
+</body>
+</html>
